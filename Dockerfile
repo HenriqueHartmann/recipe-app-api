@@ -17,7 +17,7 @@ ENV PYTHONUNBUFFERED 1
 # This copies the requirements.txt file into the Docker image. We can use that to install the Python requirements.
 COPY ./requirements.txt /tmp/requirements.txt
 
-COPY ./requirements.dev.txt /tmp/requirements.txt
+COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 
 # We copy the app directory into the container. This directory it's going to contain our Django app.
 COPY ./app /app
