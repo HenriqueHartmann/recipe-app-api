@@ -1,0 +1,19 @@
+# So basically in this file we want to exclude any files that Docker
+# doesn't need to be concerned with.
+
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+# Python
+# the __pycache that would be created on our local machine would maybe be specifically for our operating system and not for the Alpine operating system.
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycache__/
+app/*/*/*/__pycache__/
+.env/
+.venv/
+venv/
