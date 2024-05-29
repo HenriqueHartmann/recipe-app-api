@@ -62,13 +62,13 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /tmp/requirements.txt && \
     if [ $DEV = "true" ]; \
-        then /py/bin/pip install - r /tmp/requirements.dev.txt ; \
+    then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
     rm -rf /tmp && \
     adduser \
-        --disabled-password \
-        --no-create-home \
-        django-user
+    --disabled-password \
+    --no-create-home \
+    django-user
 
 # So this updates the environment variable inside the image and we're updating the path environment variable. So the path is the
 # environment variable that's automatically created on Linux operating systems. So whenever we run any Python commands, it will

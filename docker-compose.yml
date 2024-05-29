@@ -9,9 +9,8 @@ services:
     ports:
       - "8000:8000"
     volumes:
-    # Reflect our local machine changes in the running container in real time.
-    # So, we don't have to rebuild the container.
+      # Reflect our local machine changes in the running container in real time.
+      # So, we don't have to rebuild the container.
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
-    
